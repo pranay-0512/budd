@@ -44,6 +44,11 @@ const fileSchema = new Schema({
     download_link: { // cloudinary link
         type: String
     },
+    isPartOf: {
+        type: Schema.Types.ObjectId,
+        ref: 'Workspace',
+        required: true
+    },
 
 }, { timestamps: true })
 
